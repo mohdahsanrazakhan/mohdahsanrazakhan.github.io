@@ -302,10 +302,17 @@ section {
   display: grid;
   gap: 1rem;
   place-items: center;
-  background-color: darkgray;
-  border: 2px solid #fff;
+  background-color: #343541;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
   padding: 1rem;
   border-radius: 1rem;
+  transition: background-color 0.5s ease;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.element-tool:hover {
+  background-color: #CBCBD4;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
 }
 
 /* .snaps-inline {
