@@ -251,12 +251,13 @@
       <p>I am always interested in collaborating on exciting projects and working with new clients. Whether you're
         looking for a front-end developer to help bring your website to life or you have a unique idea that requires a
         creative touch, I'd love to hear from you.</p>
-      <form class="contact-form" method="POST" action="mailto: datawithmark@gmail.com" enctype="multipart/form-data">
-        <input type="text" name="name" id="name" placeholder="Your Name" required>
-        <input type="text" name="email" id="email" placeholder="Your Email" required>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"
-          required></textarea>
-        <button type="submit">get in touch</button>
+
+      <form class="contact-form" method="post" id="frmContact">
+        <input type="text" name="fullname" id="fullname" placeholder="Name" required>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="text" name="subject" id="subject" placeholder="Subject">
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"></textarea>
+        <button type="submit" name="submit">get in touch</button>
 
       </form>
     </div>
@@ -315,6 +316,42 @@
     </div>
 
   </footer>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCiXLRxMS96P6gJkgZA0_vaVfvbDwZo7Hw",
+      authDomain: "contact-me-1e5ac.firebaseapp.com",
+      databaseURL: "https://contact-me-1e5ac-default-rtdb.firebaseio.com",
+      projectId: "contact-me-1e5ac",
+      storageBucket: "contact-me-1e5ac.appspot.com",
+      messagingSenderId: "868353551025",
+      appId: "1:868353551025:web:fe3a0e22677ea34e87d090"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    // Get a reference to the database service
+    const db = getDatabase(app);
+
+    document.getElementById('frmContact').addEventListener('submit', function (e) {
+      e.preventDefault();
+      set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+        name: document.getElementById('fullname').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      });
+
+      alert('Your form is submitted');
+      document.getElementById('frmContact').reset();
+    });
+  </script>
 </body>
 
 </html>
