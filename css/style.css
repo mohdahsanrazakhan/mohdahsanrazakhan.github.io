@@ -249,7 +249,7 @@ section {
   border-radius: 0px;
   color: #ffffff;
   cursor: pointer;
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: inline-block;
   font-size: 1.25rem;
   letter-spacing: 1px;
