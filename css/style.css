@@ -244,6 +244,28 @@ section {
   padding-block: 5rem;
 }
 
+.button_slide {
+  border: 2px solid rgb(5, 117, 230);
+  border-radius: 0px;
+  color: #ffffff;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 10px 30px;
+
+  box-shadow: inset 0 0 0 0 #0575e6;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.slide_right:hover {
+  box-shadow: inset 400px 0 0 0 #0575e6;
+}
+
 /* ABOUT ME SECTION */
 
 .aboutme {
@@ -307,7 +329,6 @@ section {
   padding: 1rem;
   border-radius: 1rem;
   transition: background-color 0.5s ease;
-  transition: box-shadow 0.3s ease-out;
 }
 
 .element-tool:hover {
@@ -374,33 +395,46 @@ section {
 ul {
   display: flex;
   flex-wrap: wrap;
+  gap: 1;
   justify-content: space-evenly;
   font-size: 1rem;
   padding: 0;
+}
+
+ul>* {
+  flex: 1;
 }
 
 ul li {
   list-style: none;
   padding: 5px;
   margin: 5px;
-  background: #23a6d5;
+  background: linear-gradient(45deg,
+      #0575e6,
+      #23d5ab,
+      #0072b1);
   border-radius: 5px;
 }
 
 .links {
   display: flex;
+  gap: 1;
   justify-content: space-between;
 }
 
 .links .link {
+  flex: 1;
   font-size: 1rem;
   text-decoration: none;
-  background-color: #1877F2;
   color: #fff;
   padding: 5px;
   margin: 5px;
   width: 150px;
   border-radius: 5px;
+  background: linear-gradient(45deg,
+      #0575e6,
+      #12c2e9,
+      #0072b1);
 }
 
 /* CONTACT ME SECTION */
