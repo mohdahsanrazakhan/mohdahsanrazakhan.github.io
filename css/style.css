@@ -55,6 +55,18 @@ header {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   margin-right: 15px;
+
+  /* Tilt Effect Added */
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transform: translateZ(20px);
+}
+
+.profile-img .profile-pic {
+  /* Tilt Effect Added */
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transform: translateZ(20px);
 }
 
 @keyframes gradient {
@@ -329,11 +341,20 @@ section {
   padding: 1rem;
   border-radius: 1rem;
   transition: background-color 0.5s ease;
+
+  /* Tilt Effect Added */
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transform: translateZ(20px);
 }
 
-.element-tool:hover {
-  background-color: #CBCBD4;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+.element-tool,
+a,
+img {
+  /* Tilt Effect Added */
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transform: translateZ(20px);
 }
 
 /* .snaps-inline {
@@ -382,6 +403,21 @@ section {
   width: 280px;
   background-color: black;
   border-radius: 10px;
+
+  /* Tilt Effect  */
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transform: translateZ(20px);
+}
+
+/* Tilt Effect  */
+.project-card>h3,
+p,
+ul,
+.links {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transform: translateZ(20px);
 }
 
 .type {
@@ -390,6 +426,7 @@ section {
 
 .project-card h3 {
   margin: 0;
+
 }
 
 ul {
@@ -411,7 +448,7 @@ ul li {
   margin: 5px;
   background: linear-gradient(45deg,
       #0575e6,
-      #23d5ab,
+      #12c2e9,
       #0072b1);
   border-radius: 5px;
 }
