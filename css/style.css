@@ -8,23 +8,6 @@
   --body-bg: hsl(0, 0%, 12%);
 }
 
-/* 
-::-webkit-scrollbar {
-  width: 1em;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--scrollbar-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-color);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #0575e6;
-} */
-
 /* WATCH AGAIN */
 html {
   color-scheme: dark light;
@@ -55,19 +38,8 @@ header {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   margin-right: 15px;
-
-  /* Tilt Effect Added */
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-  transform: translateZ(20px);
 }
 
-.profile-img .profile-pic {
-  /* Tilt Effect Added */
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-  transform: translateZ(20px);
-}
 
 @keyframes gradient {
   0% {
