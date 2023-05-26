@@ -10,7 +10,7 @@
 
 /* WATCH AGAIN */
 html {
-  color-scheme: dark light;
+  color-scheme: dark;
 }
 
 body {
@@ -329,15 +329,6 @@ img {
   transform: translateZ(20px);
 }
 
-/* .snaps-inline {
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: var(1rem);
-}
-
-.snaps-inline>* {
-  scroll-snap-align: start;
-} */
-
 /* TOOLS & TECHNOLOGIES SECTION END */
 
 
@@ -386,6 +377,7 @@ img {
 .project-card>h3,
 p,
 ul,
+li,
 .links {
   transform-style: preserve-3d;
   transform: perspective(1000px);
