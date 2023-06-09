@@ -272,17 +272,19 @@
   <section class="contactme">
     <div class="wrapper">
 
-      <h2 class="section-title">contact me</h2>
+      <h2 class="section-title">contact <span>me</span></h2>
       <p>I am always interested in collaborating on exciting projects and working with new clients. Whether you're
         looking for a front-end developer to help bring your website to life or you have a unique idea that requires a
         creative touch, I'd love to hear from you.</p>
 
       <form class="contact-form" method="post" id="frmContact">
-        <input type="text" name="fullname" id="fullname" placeholder="Name" required>
-        <input type="email" name="email" id="email" placeholder="Email" required>
+        <div class="nameEmail">
+          <input type="text" name="fullname" id="fullname" placeholder="Name" required>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+        </div>
         <input type="text" name="subject" id="subject" placeholder="Subject">
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"></textarea>
-        <button type="submit" name="submit">get in touch</button>
+        <button type="submit" name="submit" class="button_slide slide_right">get in touch</button>
 
       </form>
     </div>
