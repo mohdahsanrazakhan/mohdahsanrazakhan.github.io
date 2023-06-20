@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=IBM+Plex+Mono&family=IBM+Plex+Sans&family=Open+Sans&family=Outfit&family=Poppins:ital,wght@0,400;0,700;1,400;1,800&family=Roboto&family=Tilt+Prism&display=swap');
+
 *,
 *::before,
 *::after {
@@ -15,10 +17,10 @@ html {
 
 body {
   background: var(--body-bg);
-  font-family: system-ui;
   font-size: 1.25rem;
   line-height: 1.5;
   margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 /* DON'T TOUCH ABOVE (WORKING ON HEADER SECTION) */
@@ -214,14 +216,17 @@ header {
 }
 
 .site-title {
-  font-size: 3rem;
+  font-family: 'Great Vibes', cursive;
+  color: #f4f4f4;
+  font-size: 4rem;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .section-title {
-  font-size: 2.25rem;
+  font-size: 3rem;
   text-transform: uppercase;
+  font-family: 'Tilt Prism', cursive;
 }
 
 .section-title span {
@@ -367,7 +372,7 @@ img {
 .project-card {
   padding: 10px;
   height: fit-content;
-  width: 280px;
+  width: 300px;
   background-color: black;
   border-radius: 10px;
 
@@ -462,7 +467,8 @@ input {
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
-  border: 2px solid #1877F2;
+  border: 2px solid rgb(24, 119, 242);
+  border-radius: 5px;
   width: 100%;
 }
 
@@ -474,6 +480,12 @@ textarea {
   resize: none;
   background-color: transparent;
   border: 2px solid #1877F2;
+  border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgba(24, 119, 242, 0.2);
 }
 
 button {
@@ -482,8 +494,7 @@ button {
   padding: 5px 10px;
   text-transform: capitalize;
   font-size: inherit;
-  border-radius: 10px;
-  border: none;
+  font-family: inherit;
   width: fit-content;
   align-self: center;
 }
@@ -667,7 +678,7 @@ footer {
   }
 
   .site-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .tools-scroller {
@@ -697,7 +708,7 @@ footer {
   }
 
   .site-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   p.span {
